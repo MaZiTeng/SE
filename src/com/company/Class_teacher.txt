@@ -1,3 +1,4 @@
-ECS     Helen
-ECS     Helen
-ECS	Helen
+IT programming Simon teacher1
+ds deeplearning Helen teacher11
+ds deeplearning Helen teacher12
+ds deeplearning Helen teacher7

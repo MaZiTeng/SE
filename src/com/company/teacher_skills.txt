@@ -1,5 +1,2 @@
-Simon   Maths
-Simon   IT
-Helen   ECS
-Helen	PPT
-Helen	Sleep
+Simon	ECS		PASS
+Simon	ECS		PASS
