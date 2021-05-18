@@ -88,6 +88,14 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        System.out.println("**********************************************************\n" +
+                "*                                                        *\n" +
+                "*   University of Glasgow SE course RP_AF group          *\n" +
+                "*                                                        *\n" +
+                "*                                                        *\n" +
+                "*          Contact the admin if any question.            *\n" +
+                "*                                                        *\n" +
+                "**********************************************************");
         LogSystem logSystem = new LogSystem();
         menu(logSystem.role);
         System.out.println("大爷~ 玩得好常来啊~");
