@@ -10,7 +10,7 @@ public class Functions {
         DataProcessor Request = new DataProcessor();
         Request.setFileName("Request");
         String[] dataGet = Request.getData();
-        System.out.println("提出者 课程 人员数量 接受的培训 状态");
+        System.out.println("提出者 课程 人员数量 接受的培训");
         if (role.Authority == 0) {
             for (String i : dataGet) {
                 System.out.println(i);

@@ -1,3 +1,3 @@
-Simon DTA 1 database 1
-Helen ECS 2 security 1
-Simon ECS 2 security 1
+Simon DTA 1 database
+Helen ECS 2 security
+Simon ECS 2 security
