@@ -2,15 +2,16 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Functions {
+public class adminFunctions {
+    view p = new view();
     final Scanner myScanner = new Scanner(System.in);
 
     public void fCheckRequest(Role role) {
-        System.out.println("查看教学要求");
+        this.p.print("查看教学要求");
         DataProcessor Request = new DataProcessor();
         Request.setFileName("Request");
         String[] dataGet = Request.getData();
-        System.out.printf("%10s%10s%7s%15s\n", "提出者", "课程", "人员数量", "接受的培训");
+        this.p.print(String.format("%10s%10s%7s%15s\n", "提出者", "课程", "人员数量", "接受的培训"));
         if (role.getAuthority() == 0) {
             for (String i : dataGet) {
                 String[] strArr = i.split(" ");
@@ -26,15 +27,6 @@ public class Functions {
                 }
             }
         }
-    }
-
-    public void fPushRequest(Role role) {
-        System.out.println("提交教学要求");
-        System.out.println("输入课程、人员数量、接受的培训，用空格分隔");
-        String data = myScanner.nextLine();
-        DataProcessor Assign = new DataProcessor();
-        Assign.setFileName("Request");
-        Assign.writeData(role.getName() + " " + data);
     }
 
     public void fAssignTeachers() {

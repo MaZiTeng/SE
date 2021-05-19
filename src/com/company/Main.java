@@ -3,13 +3,13 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
-    public static int menu(Role role) {
+    public static void menu(Role role) {
         view p = new view();
         Scanner myScanner = new Scanner(System.in);
-        Functions fun = new Functions();
         int funNumber = 0;
         switch (role.getAuthority()) {
             case 0:
+                adminFunctions adminfun = new adminFunctions();
                 p.print("我是管理员");
                 p.print("1.查看教学需求");
                 p.print("2.分配课程");
@@ -22,33 +22,33 @@ public class Main {
                 myScanner.nextLine();
                 switch (funNumber) {
                     case 0:
-                        return 0;
+                        return;
                     case 1:
-                        fun.fCheckRequest(role);
+                        adminfun.fCheckRequest(role);
                         p.print("按回车返回主菜单！");
                         myScanner.nextLine();
                         menu(role);
                         break;
                     case 2:
-                        fun.fAssignTeachers();
+                        adminfun.fAssignTeachers();
                         p.print("按回车返回主菜单！");
                         myScanner.nextLine();
                         menu(role);
                         break;
                     case 3:
-                        fun.fCheckClassTeacher();
+                        adminfun.fCheckClassTeacher();
                         p.print("按回车返回主菜单！");
                         myScanner.nextLine();
                         menu(role);
                         break;
                     case 4:
-                        fun.fUpdateSkills();
+                        adminfun.fUpdateSkills();
                         p.print("按回车返回主菜单！");
                         myScanner.nextLine();
                         menu(role);
                         break;
                     case 5:
-                        fun.fCheckSkills();
+                        adminfun.fCheckSkills();
                         p.print("按回车返回主菜单！");
                         myScanner.nextLine();
                         menu(role);
@@ -59,6 +59,7 @@ public class Main {
                 }
                 break;
             case 1:
+                directorFunction dirFun = new directorFunction();
                 p.print("我是课程主管");
                 p.print("1.查看教学需求");
                 p.print("2.提交教学需求");
@@ -68,15 +69,15 @@ public class Main {
                 myScanner.nextLine();
                 switch (funNumber) {
                     case 0:
-                        return 0;
+                        return;
                     case 1:
-                        fun.fCheckRequest(role);
+                        dirFun.fCheckRequest(role);
                         p.print("按回车返回主菜单！");
                         myScanner.nextLine();
                         menu(role);
                         break;
                     case 2:
-                        fun.fPushRequest(role);
+                        dirFun.fPushRequest(role);
                         p.print("按回车返回主菜单！");
                         myScanner.nextLine();
                         menu(role);
@@ -86,7 +87,6 @@ public class Main {
             default:
                 p.print("出错了！我谁都不是");
         }
-        return 1;
     }
 
     public static void main(String[] args) {
@@ -103,10 +103,8 @@ public class Main {
                             "**********************************************************"
             );
             LogSystem logSystem = new LogSystem();
-            if (menu(logSystem.getRole()) == 1) {
-                break;
-            }
+            menu(logSystem.getRole());
         } while (true);
-        p.print("大爷~ 玩得好常来啊~");
+//        p.print("大爷~ 玩得好常来啊~");
     }
 }
