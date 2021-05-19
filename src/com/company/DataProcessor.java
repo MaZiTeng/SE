@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class DataProcessor {
-    String fileName;
+    private String fileName;
 
     public void setFileName(String fileName) {
         this.fileName = fileName;

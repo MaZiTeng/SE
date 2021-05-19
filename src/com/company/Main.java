@@ -7,7 +7,7 @@ public class Main {
         Scanner myScanner = new Scanner(System.in);
         Functions fun = new Functions();
         int funNumber = 0;
-        switch (role.Authority) {
+        switch (role.getAuthority()) {
             case 0:
                 System.out.println("我是管理员");
                 System.out.println("1.查看教学需求");
@@ -97,7 +97,7 @@ public class Main {
                 "*                                                        *\n" +
                 "**********************************************************");
         LogSystem logSystem = new LogSystem();
-        menu(logSystem.role);
+        menu(logSystem.getRole());
         System.out.println("大爷~ 玩得好常来啊~");
     }
 }

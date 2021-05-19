@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class LogSystem {
-    Role role = new Role();
+    final Role role = new Role();
 
 //    private void logIn(){
 //
@@ -56,5 +56,9 @@ public class LogSystem {
         }
 
 //        logIn();
+    }
+
+    public Role getRole() {
+        return role;
     }
 }

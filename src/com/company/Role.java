@@ -1,9 +1,9 @@
 package com.company;
 
 public class Role {
-    int UID;
-    int Authority;
-    String Name;
+    private int UID;
+    private int Authority;
+    private String Name;
 
     public void setUID(int UID) {
         this.UID = UID;
@@ -15,5 +15,13 @@ public class Role {
 
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    public int getAuthority() {
+        return Authority;
+    }
+
+    public String getName() {
+        return Name;
     }
 }

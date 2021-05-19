@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class Functions {
-    Scanner myScanner = new Scanner(System.in);
+    final Scanner myScanner = new Scanner(System.in);
 
     public void fCheckRequest(Role role) {
         System.out.println("查看教学要求");
@@ -11,14 +11,14 @@ public class Functions {
         Request.setFileName("Request");
         String[] dataGet = Request.getData();
         System.out.println("提出者 课程 人员数量 接受的培训");
-        if (role.Authority == 0) {
+        if (role.getAuthority() == 0) {
             for (String i : dataGet) {
                 System.out.println(i);
             }
-        } else if (role.Authority == 1) {
+        } else if (role.getAuthority() == 1) {
             for (String i : dataGet) {
                 String[] strArr = i.split(" ");
-                if (strArr[0].equals(role.Name)) {
+                if (strArr[0].equals(role.getName())) {
                     System.out.println(i);
                 }
             }
@@ -31,7 +31,7 @@ public class Functions {
         String data = myScanner.nextLine();
         DataProcessor Assign = new DataProcessor();
         Assign.setFileName("Request");
-        Assign.writeData(role.Name + " " + data);
+        Assign.writeData(role.getName() + " " + data);
     }
 
     public void fAssignTeachers() {
