@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class LogSystem {
-    final Role role = new Role();
+    private Role role = new Role();
 
 //    private void logIn(){
 //
@@ -41,11 +41,13 @@ public class LogSystem {
         myScanner.nextLine();
         switch (r) {
             case 0:
+                this.role = new admin();
                 this.role.setUID(1);
                 this.role.setName("Helen");
                 this.role.setAuthority(0);
                 break;
             case 1:
+                this.role = new director();
                 this.role.setUID(2);
                 this.role.setName("Simon");
                 this.role.setAuthority(1);
