@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
-    public static void menu(Role role) {
+    public static int menu(Role role) {
         Scanner myScanner = new Scanner(System.in);
         Functions fun = new Functions();
         int funNumber = 0;
@@ -21,7 +21,7 @@ public class Main {
                 myScanner.nextLine();
                 switch (funNumber) {
                     case 0:
-                        return;
+                        return 0;
                     case 1:
                         fun.fCheckRequest(role);
                         System.out.println("按回车返回主菜单！");
@@ -67,7 +67,7 @@ public class Main {
                 myScanner.nextLine();
                 switch (funNumber) {
                     case 0:
-                        return;
+                        return 0;
                     case 1:
                         fun.fCheckRequest(role);
                         System.out.println("按回车返回主菜单！");
@@ -85,19 +85,26 @@ public class Main {
             default:
                 System.out.println("出错了！我谁都不是");
         }
+        return 1;
     }
 
     public static void main(String[] args) {
-        System.out.println("**********************************************************\n" +
-                "*                                                        *\n" +
-                "*   University of Glasgow SE course RP_AF group          *\n" +
-                "*                                                        *\n" +
-                "*                                                        *\n" +
-                "*          Contact the admin if any question.            *\n" +
-                "*                                                        *\n" +
-                "**********************************************************");
-        LogSystem logSystem = new LogSystem();
-        menu(logSystem.getRole());
+        do {
+            System.out.println(
+                    "**********************************************************\n" +
+                            "*                                                        *\n" +
+                            "*   University of Glasgow SE course RP_AF group          *\n" +
+                            "*                                                        *\n" +
+                            "*                                                        *\n" +
+                            "*          Contact the admin if any question.            *\n" +
+                            "*                                                        *\n" +
+                            "**********************************************************"
+            );
+            LogSystem logSystem = new LogSystem();
+            if (menu(logSystem.getRole()) == 1) {
+                break;
+            }
+        } while (true);
         System.out.println("大爷~ 玩得好常来啊~");
     }
 }

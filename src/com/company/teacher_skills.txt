@@ -1,2 +1,2 @@
-Simon	ECS		PASS
-Simon	ECS		PASS
+Simon ECS PASS
+Simon ECS PASS

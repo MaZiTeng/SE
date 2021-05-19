@@ -10,16 +10,19 @@ public class Functions {
         DataProcessor Request = new DataProcessor();
         Request.setFileName("Request");
         String[] dataGet = Request.getData();
-        System.out.println("提出者 课程 人员数量 接受的培训");
+        System.out.printf("%10s%10s%7s%15s\n", "提出者", "课程", "人员数量", "接受的培训");
         if (role.getAuthority() == 0) {
             for (String i : dataGet) {
-                System.out.println(i);
+                String[] strArr = i.split(" ");
+                System.out.printf("%10s%10s%7s%15s\n", strArr[0], strArr[1], strArr[2], strArr[3]);
+//                System.out.println(i);
             }
         } else if (role.getAuthority() == 1) {
             for (String i : dataGet) {
                 String[] strArr = i.split(" ");
                 if (strArr[0].equals(role.getName())) {
-                    System.out.println(i);
+                    System.out.printf("%10s%10s%7s%15s\n", strArr[0], strArr[1], strArr[2], strArr[3]);
+//                    System.out.println(i);
                 }
             }
         }
@@ -57,9 +60,10 @@ public class Functions {
         DataProcessor Request = new DataProcessor();
         Request.setFileName("teacher_skills");
         String[] dataGet = Request.getData();
-        System.out.println("名字 能力 状态");
+        System.out.printf("%10s%10s%10s\n", "名字", "能力", "状态");
         for (String i : dataGet) {
-            System.out.println(i);
+            String[] strArr = i.split(" ");
+            System.out.printf("%10s%10s%10s\n", strArr[0], strArr[1], strArr[2]);
         }
     }
 
@@ -88,9 +92,10 @@ public class Functions {
         DataProcessor Request = new DataProcessor();
         Request.setFileName("Class_teacher");
         String[] dataGet = Request.getData();
-        System.out.println("班级名称 课程名称 主管名称 ptt名称");
+        System.out.printf("%10s%20s%10s%10s\n", "班级名称", "课程名称", "主管名称", "ptt名称");
         for (String i : dataGet) {
-            System.out.println(i);
+            String[] strArr = i.split(" ");
+            System.out.printf("%10s%20s%10s%10s\n", strArr[0], strArr[1], strArr[2], strArr[3]);
         }
     }
 }
