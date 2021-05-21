@@ -1,7 +1,8 @@
 package com.company;
 
 public class Role {
-    private int UID;
+//    展示角色属性
+private int UID;
     private int Authority;
     private String Name;
 
