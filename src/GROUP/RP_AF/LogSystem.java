@@ -1,17 +1,17 @@
-package com.company;
+package GROUP.RP_AF;
 
 import java.util.Scanner;
 
 public class LogSystem {
     private Role role = new Role();
 
-//    权限管理系统
+    //    Choose a role
     public LogSystem() {
         Scanner myScanner = new Scanner(System.in);
-        System.out.println("测试管理员用户请输入0，测试课程主管用户请输入1");
+        System.out.println("Please enter 0 if you are the administrator, or enter 1 if you are a course director");
         int r = myScanner.nextInt();
         myScanner.nextLine();
-//        判断用户属性
+//        check the user
         switch (r) {
             case 0:
                 this.role = new admin();
@@ -26,7 +26,7 @@ public class LogSystem {
                 this.role.setAuthority(1);
                 break;
             default:
-                System.out.println("输入错误");
+                System.out.println("Error!");
                 System.exit(0);
         }
     }

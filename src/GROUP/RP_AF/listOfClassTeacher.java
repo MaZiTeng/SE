@@ -1,4 +1,4 @@
-package com.company;
+package GROUP.RP_AF;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -7,35 +7,35 @@ import java.util.Collection;
 public class listOfClassTeacher {
     Collection<String> classes = new ArrayList<>();
 
-    //    增加数据
+    //    Add data
     public void addclasses(String data) {
         classes.add(data);
     }
 
-    //    展示数据
+    //    Get data
     public Collection<String> getClassess() {
         return classes;
     }
 
-    //    向文件写入数据
+    //    Write data to the file
     public void rewrite() {
         try {
             BufferedWriter out = new BufferedWriter(
-                    new FileWriter("./src/com/company/Class_teacher.txt"));
+                    new FileWriter("./src/GROUP/RP_AF/Class_teacher.txt"));
             for (String i : classes) {
                 out.write(i + "\n");
             }
             out.close();
-            System.out.println("ClassTeacher数据写入成功");
+            System.out.println("Successfully write");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    //    从文件读取数据
+    //    read data from the file
     public listOfClassTeacher() {
         try {
-            BufferedReader in = new BufferedReader(new FileReader("./src/com/company/Class_teacher.txt"));
+            BufferedReader in = new BufferedReader(new FileReader("./src/GROUP/RP_AF/Class_teacher.txt"));
             String str;
             while ((str = in.readLine()) != null) {
                 classes.add(str);

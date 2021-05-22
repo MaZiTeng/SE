@@ -1,4 +1,4 @@
-package com.company;
+package GROUP.RP_AF;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -7,35 +7,35 @@ import java.util.Collection;
 public class listOfRequest {
     Collection<String> request = new ArrayList<>();
 
-    //    增加数据
+    //    Add data
     public void addRequest(String data) {
         request.add(data);
     }
 
-    //    获取数据
+    //    get data
     public Collection<String> getRequest() {
         return request;
     }
 
-    //    向文件写入数据
+    //    Write data to the file
     public void rewrite() {
         try {
             BufferedWriter out = new BufferedWriter(
-                    new FileWriter("./src/com/company/Request.txt"));
+                    new FileWriter("./src/GROUP/RP_AF/Request.txt"));
             for (String i : request) {
                 out.write(i + "\n");
             }
             out.close();
-            System.out.println("Request数据写入成功");
+            System.out.println("Successfully write");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    //    从文件获取数据
+    //    Read data from the file
     public listOfRequest() {
         try {
-            BufferedReader in = new BufferedReader(new FileReader("./src/com/company/Request.txt"));
+            BufferedReader in = new BufferedReader(new FileReader("./src/GROUP/RP_AF/Request.txt"));
             String str;
             while ((str = in.readLine()) != null) {
                 request.add(str);

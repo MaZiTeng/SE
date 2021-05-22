@@ -1,8 +1,8 @@
-package com.company;
+package GROUP.RP_AF;
 
-//对外展示
+//external print
 public class view {
-    //    将获取到的数据展示出来
+    //    show the data read from the file
     public void print(String out) {
         System.out.println(out);
     }

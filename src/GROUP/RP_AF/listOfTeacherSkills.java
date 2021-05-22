@@ -1,4 +1,4 @@
-package com.company;
+package GROUP.RP_AF;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -7,35 +7,35 @@ import java.util.Collection;
 public class listOfTeacherSkills {
     Collection<String> skills = new ArrayList<>();
 
-    //    增加数据
+    //    Add data
     public void addSkills(String data) {
         skills.add(data);
     }
 
-    //    展示数据
+    //    Get data
     public Collection<String> getSkills() {
         return skills;
     }
 
-    //    向文件写入数据
+    //    Write data to the file
     public void rewrite() {
         try {
             BufferedWriter out = new BufferedWriter(
-                    new FileWriter("./src/com/company/teacher_skills.txt"));
+                    new FileWriter("./src/GROUP/RP_AF/teacher_skills.txt"));
             for (String i : skills) {
                 out.write(i + "\n");
             }
             out.close();
-            System.out.println("TeacherSkills数据写入成功");
+            System.out.println("Successfully write");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    //    从文件获取数据
+    //    Read data from the file
     public listOfTeacherSkills() {
         try {
-            BufferedReader in = new BufferedReader(new FileReader("./src/com/company/teacher_skills.txt"));
+            BufferedReader in = new BufferedReader(new FileReader("./src/GROUP/RP_AF/teacher_skills.txt"));
             String str;
             while ((str = in.readLine()) != null) {
                 skills.add(str);

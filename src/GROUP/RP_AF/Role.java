@@ -1,7 +1,7 @@
-package com.company;
+package GROUP.RP_AF;
 
 public class Role {
-//    展示角色属性
+    //    show the attributes
 private int UID;
     private int Authority;
     private String Name;

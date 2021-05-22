@@ -1,4 +1,4 @@
-package com.company;
+package GROUP.RP_AF;
 
 import java.util.Collection;
 import java.util.Scanner;
@@ -13,24 +13,24 @@ public class directorFunction {
     }
 
     public void fCheckRequest(Role role) {
-        this.p.print("查看教学要求");
+        this.p.print("Check Teaching Requirements");
         Collection<String> dataGet = request.getRequest();
-        this.p.print(String.format("%10s%10s%7s%15s", "提出者", "课程", "人员数量", "接受的培训"));
-        //        遍历输出
+        this.p.print(String.format("%15s%15s%20s%23s", "Course_Director_Name", "Course_Name", "Number_of_Teachers", "Compulsory_Training"));
+        //        output teaching requirements
         for (String i : dataGet) {
             String[] strArr = i.split(" ");
             if (strArr[0].equals(role.getName())) {
-                System.out.printf("%10s%10s%7s%15s\n", strArr[0], strArr[1], strArr[2], strArr[3]);
+                System.out.printf("%15s%15s%20s%23s\n", strArr[0], strArr[1], strArr[2], strArr[3]);
             }
         }
     }
 
 
     public void fPushRequest(Role role) {
-        System.out.println("提交教学要求");
-        System.out.println("输入课程、人员数量、接受的培训，用空格分隔");
+        System.out.println("Submit Teaching Requirements");
+        System.out.println("Please enter Course name, Number of Teachers and Compulsory Training. Separate them with one space.");
         String data = myScanner.nextLine();
-//        输入时增加登陆者的姓名
+//        Add the user's name when input information
         request.addRequest(role.getName() + " " + data);
     }
 
