@@ -18,6 +18,7 @@ public class ListOfTeacherSkill {
     }
 
     //    Write data to the file
+//    修改这里可以一键替换数据库
     public void rewrite() {
         try {
             BufferedWriter out = new BufferedWriter(
@@ -33,6 +34,7 @@ public class ListOfTeacherSkill {
     }
 
     //    Read data from the file
+//    修改这里可以一键替换数据库
     public ListOfTeacherSkill() {
         try {
             BufferedReader in = new BufferedReader(new FileReader("./src/GROUP/RP_AF/Teacher_skill.txt"));
