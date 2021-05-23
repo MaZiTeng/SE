@@ -3,14 +3,14 @@ package GROUP.RP_AF;
 import java.util.Collection;
 import java.util.Scanner;
 
-public class adminFunctions {
-    view p = new view();
+public class AdminFunctions {
+    View p = new View();
     final Scanner myScanner = new Scanner(System.in);
-    listOfRequest request;
-    listOfTeacherSkills skills;
-    listOfClassTeacher classes;
+    ListOfRequest request;
+    ListOfTeacherSkill skills;
+    ListOfClassTeacher classes;
 
-    public adminFunctions(listOfRequest request, listOfTeacherSkills skills, listOfClassTeacher classes) {
+    public AdminFunctions(ListOfRequest request, ListOfTeacherSkill skills, ListOfClassTeacher classes) {
 //        import all of the lists
         this.request = request;
         this.skills = skills;

@@ -4,25 +4,25 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class listOfClassTeacher {
-    Collection<String> classes = new ArrayList<>();
+public class ListOfTeacherSkill {
+    Collection<String> skills = new ArrayList<>();
 
     //    Add data
-    public void addclasses(String data) {
-        classes.add(data);
+    public void addSkills(String data) {
+        skills.add(data);
     }
 
     //    Get data
-    public Collection<String> getClassess() {
-        return classes;
+    public Collection<String> getSkills() {
+        return skills;
     }
 
     //    Write data to the file
     public void rewrite() {
         try {
             BufferedWriter out = new BufferedWriter(
-                    new FileWriter("./src/GROUP/RP_AF/Class_teacher.txt"));
-            for (String i : classes) {
+                    new FileWriter("./src/GROUP/RP_AF/teacher_skills.txt"));
+            for (String i : skills) {
                 out.write(i + "\n");
             }
             out.close();
@@ -32,13 +32,13 @@ public class listOfClassTeacher {
         }
     }
 
-    //    read data from the file
-    public listOfClassTeacher() {
+    //    Read data from the file
+    public ListOfTeacherSkill() {
         try {
-            BufferedReader in = new BufferedReader(new FileReader("./src/GROUP/RP_AF/Class_teacher.txt"));
+            BufferedReader in = new BufferedReader(new FileReader("./src/GROUP/RP_AF/teacher_skills.txt"));
             String str;
             while ((str = in.readLine()) != null) {
-                classes.add(str);
+                skills.add(str);
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -3,12 +3,12 @@ package GROUP.RP_AF;
 import java.util.Collection;
 import java.util.Scanner;
 
-public class directorFunction {
-    view p = new view();
+public class DirectorFunction {
+    View p = new View();
     final Scanner myScanner = new Scanner(System.in);
-    listOfRequest request;
+    ListOfRequest request;
 
-    public directorFunction(listOfRequest request) {
+    public DirectorFunction(ListOfRequest request) {
         this.request = request;
     }
 

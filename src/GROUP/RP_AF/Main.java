@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class Main {
 
     public static void menu(
-            Role role, listOfRequest request,
-            listOfTeacherSkills skills,
-            listOfClassTeacher classes
+            Role role, ListOfRequest request,
+            ListOfTeacherSkill skills,
+            ListOfClassTeacher classes
     ) {
-        view p = new view();
+        View p = new View();
         Scanner myScanner = new Scanner(System.in);
         int funNumber = 0;
 //        show a related menu based on the user
         switch (role.getAuthority()) {
             case 0:
-                adminFunctions adminfun = new adminFunctions(request, skills, classes);
+                AdminFunctions adminfun = new AdminFunctions(request, skills, classes);
                 p.print("I am the administrator");
                 p.print("1.Check Teaching Requrements");
                 p.print("2.Assign Teachers");
@@ -66,7 +66,7 @@ public class Main {
                 }
                 break;
             case 1:
-                directorFunction dirFun = new directorFunction(request);
+                DirectorFunction dirFun = new DirectorFunction(request);
                 p.print("I am a course director");
                 p.print("1.Check Teaching Requirements");
                 p.print("2.Submit Teaching Requirements");
@@ -97,7 +97,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        view p = new view();
+        View p = new View();
         do {
 //            Welcome board
             p.print(
@@ -112,9 +112,9 @@ public class Main {
                             "**********************************************************"
             );
 //            Read data from the files
-            listOfRequest request = new listOfRequest();
-            listOfTeacherSkills skills = new listOfTeacherSkills();
-            listOfClassTeacher classes = new listOfClassTeacher();
+            ListOfRequest request = new ListOfRequest();
+            ListOfTeacherSkill skills = new ListOfTeacherSkill();
+            ListOfClassTeacher classes = new ListOfClassTeacher();
 //            Login
             LogSystem logSystem = new LogSystem();
 //            Main menu
