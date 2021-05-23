@@ -15,7 +15,7 @@ public class Main {
 //        show a related menu based on the user
         switch (role.getAuthority()) {
             case 0:
-                AdminFunctions adminfun = new AdminFunctions(request, skills, classes);
+                AdminFunction adminfun = new AdminFunction(request, skills, classes);
                 p.print("I am the administrator");
                 p.print("1.Check Teaching Requrements");
                 p.print("2.Assign Teachers");

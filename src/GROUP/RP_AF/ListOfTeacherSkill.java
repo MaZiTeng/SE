@@ -21,7 +21,7 @@ public class ListOfTeacherSkill {
     public void rewrite() {
         try {
             BufferedWriter out = new BufferedWriter(
-                    new FileWriter("./src/GROUP/RP_AF/teacher_skills.txt"));
+                    new FileWriter("./src/GROUP/RP_AF/Teacher_skill.txt"));
             for (String i : skills) {
                 out.write(i + "\n");
             }
@@ -35,7 +35,7 @@ public class ListOfTeacherSkill {
     //    Read data from the file
     public ListOfTeacherSkill() {
         try {
-            BufferedReader in = new BufferedReader(new FileReader("./src/GROUP/RP_AF/teacher_skills.txt"));
+            BufferedReader in = new BufferedReader(new FileReader("./src/GROUP/RP_AF/Teacher_skill.txt"));
             String str;
             while ((str = in.readLine()) != null) {
                 skills.add(str);
