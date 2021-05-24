@@ -1,3 +1,6 @@
-Maggie MACHINELEARNING PASS
+Maggie Python PASS
 Adam JAVA PROCESSING
 AMY JAVA PASS
+Cindy Python PROCESSING
+Alan Python FAILED
+Alex CyberSecurity PASS

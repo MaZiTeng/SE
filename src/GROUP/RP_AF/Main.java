@@ -2,6 +2,7 @@ package GROUP.RP_AF;
 
 import java.util.Scanner;
 
+// Please make sure the path is src/GROUP/RP_AF/Main.java when you run the programme
 public class Main {
 
     public static void menu(
@@ -17,7 +18,7 @@ public class Main {
             case 0:
                 AdminFunction adminfun = new AdminFunction(request, skills, classes);
                 p.print("I am the administrator");
-                p.print("1.Check Teaching Requrements");
+                p.print("1.Check Teaching Requirements");
                 p.print("2.Assign Teachers");
                 p.print("3.Check Assignment Results");
                 p.print("4.Update Teaching Skills");
@@ -32,31 +33,31 @@ public class Main {
                         return;
                     case 1:
                         adminfun.fCheckRequest();
-                        p.print("Enter any key to return to the menu");
+                        p.print("Press Enter key to return to the menu");
                         myScanner.nextLine();
                         menu(role, request, skills, classes);
                         break;
                     case 2:
                         adminfun.fAssignTeachers();
-                        p.print("Enter any key to return to the menu");
+                        p.print("Press Enter key to return to the menu");
                         myScanner.nextLine();
                         menu(role, request, skills, classes);
                         break;
                     case 3:
                         adminfun.fCheckClassTeacher();
-                        p.print("Enter any key to return to the menu");
+                        p.print("Press Enter key to return to the menu");
                         myScanner.nextLine();
                         menu(role, request, skills, classes);
                         break;
                     case 4:
                         adminfun.fUpdateSkills();
-                        p.print("Enter any key to return to the menu");
+                        p.print("Press Enter key to return to the menu");
                         myScanner.nextLine();
                         menu(role, request, skills, classes);
                         break;
                     case 5:
                         adminfun.fCheckSkills();
-                        p.print("Enter any key to return to the menu");
+                        p.print("Press Enter key to return to the menu");
                         myScanner.nextLine();
                         menu(role, request, skills, classes);
                         break;
@@ -79,13 +80,13 @@ public class Main {
                         return;
                     case 1:
                         dirFun.fCheckRequest(role);
-                        p.print("Enter any key to return to the menu");
+                        p.print("Press Enter key to return to the menu");
                         myScanner.nextLine();
                         menu(role, request, skills, classes);
                         break;
                     case 2:
                         dirFun.fPushRequest(role);
-                        p.print("Enter any key to return to the menu！");
+                        p.print("Press Enter key to return to the menu");
                         myScanner.nextLine();
                         menu(role, request, skills, classes);
                         break;

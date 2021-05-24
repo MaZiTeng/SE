@@ -28,7 +28,7 @@ public class DirectorFunction {
 
     public void fPushRequest(Role role) {
         System.out.println("Submit Teaching Requirements");
-        System.out.println("Please enter Course name, Number of Teachers and Compulsory Training. Separate them with one space.");
+        System.out.println("Please enter Course Name, Number of Teachers and Compulsory Training. Separate them with one space. （e.g. Programming 3 Java)");
         String data = myScanner.nextLine();
 //        Add the user's name when input information
         request.addRequest(role.getName() + " " + data);

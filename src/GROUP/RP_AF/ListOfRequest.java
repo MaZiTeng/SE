@@ -12,13 +12,13 @@ public class ListOfRequest {
         request.add(data);
     }
 
-    //    get data
+    //    Get data
     public Collection<String> getRequest() {
         return request;
     }
 
     //    Write data to the file
-    //    修改这里可以一键替换数据库
+    //    Update here and replace it with database for future development
     public void rewrite() {
         try {
             BufferedWriter out = new BufferedWriter(
@@ -27,14 +27,14 @@ public class ListOfRequest {
                 out.write(i + "\n");
             }
             out.close();
-            System.out.println("Successfully write");
+            System.out.println("Successfully write to Request.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     //    Read data from the file
-    //    修改这里可以一键替换数据库
+    //    Update here and replace it with database for future development
     public ListOfRequest() {
         try {
             BufferedReader in = new BufferedReader(new FileReader("./src/GROUP/RP_AF/Request.txt"));

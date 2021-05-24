@@ -1,5 +1,5 @@
 package GROUP.RP_AF;
-
+// class Role is a pattern for all users in the system
 public class Role {
     //    show the attributes
 private int UID;

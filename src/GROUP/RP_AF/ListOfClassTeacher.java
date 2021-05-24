@@ -13,12 +13,12 @@ public class ListOfClassTeacher {
     }
 
     //    Get data
-    public Collection<String> getClassess() {
+    public Collection<String> getClasses() {
         return classes;
     }
 
     //    Write data to the file
-    //    修改这里可以一键替换数据库
+    //    Update here and replace it with database for future development
     public void rewrite() {
         try {
             BufferedWriter out = new BufferedWriter(
@@ -27,14 +27,14 @@ public class ListOfClassTeacher {
                 out.write(i + "\n");
             }
             out.close();
-            System.out.println("Successfully write");
+            System.out.println("Successfully write to Class_teacher.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     //    read data from the file
-    //    修改这里可以一键替换数据库
+    //    Update here and replace it with database for future development
     public ListOfClassTeacher() {
         try {
             BufferedReader in = new BufferedReader(new FileReader("./src/GROUP/RP_AF/Class_teacher.txt"));
